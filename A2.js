@@ -1,6 +1,6 @@
 window.onload = function () 
 {
-    document.querySelector("#tabContainer")
+    document.querySelector("#tabContainer");
     document.addEventListener("click", TabClick);
     document.querySelectorAll(".tab")[0].click();
 };
@@ -11,10 +11,9 @@ function TabClick(evt)
     let tab = evt.target;
     deselectTab();
     tab.classList.add("active");
-
+    hideSection();
     let id = tab.innerHTML; 
     id = id.replace(" ", "_");
-    hideSection();
     document.querySelector("#" + id).classList.remove("hidden");
 }
 
