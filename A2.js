@@ -1,11 +1,12 @@
 
 window.onload = function () 
 {
-    document.querySelector("#tabContainer");
-
-    document.addEventListener("click", TabClick);
+    document.querySelector("#tabContainer").addEventListener("click", TabClick);
 
     document.querySelectorAll(".tab")[0].click();
+
+    let btnT2 = document.querySelector("#btnT2");
+    btnT2.addEventListener("click", T2Calc);
 }
 
 //function to trigger class changes on click of new tab
@@ -43,10 +44,35 @@ function hideSection()
 function deselectTab() 
 {
     let tabs = document.querySelectorAll(".tab");
-    
+
     for (let i = 0; i < tabs.length; i++) 
     {
         tabs[i].classList.remove("active");
     }
 }
 
+/*Ask the user for a comma-separated set of numeric values. 
+Display the number of values entered, the total, the average, 
+the smallest value, and the largest value. */
+function T2Calc()
+{
+    let values = document.querySelector("#T2Input").value.split(',');
+    
+
+    let count = values.length;
+
+    let sum = values.sum;
+
+    let avg = sum / count;
+
+    let min = Math.min(values);
+    let max = Math.max(values);
+
+    let result = "";
+    result += "<p>Number of Values: " + count +"<br>" + "Total: " 
+    + sum + "<br>"+ "Average: " + avg + "<br>" + "Smallest: " + min + "<br>"
+    + "Largest: " + max;
+    let out = document.querySelector("#T2OutText");
+    out.innerHTML = result;
+
+}
