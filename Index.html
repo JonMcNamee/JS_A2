@@ -55,7 +55,7 @@
                 display: none;
             }
 
-            #T2Output 
+            #Output 
             {
                 border: solid thin black;
                 background-color: rgb(236, 225, 197);
@@ -63,18 +63,10 @@
                 height: 500px;
                 margin-top: 10px;
                 padding: 5px;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
             }
 
-            #T4Output
-            {
-                border: solid thin black;
-                background-color: rgb(236, 225, 197);
-                width: 500px;
-                height: auto;
-                margin-top: 10px;
-                padding: 5px;
-            }
-            
         </style>
     <body>
         <div id="content">
@@ -106,7 +98,7 @@
                 <input type="text" id="T2Input" name="T2Input"><br><br>
                 <button type="button" id="btnT2">Calculate</button>
 
-                <div id= "T2Output">
+                <div id= "Output">
                     <div id = "T2OutText"> </div>
                 </div>
 
@@ -122,10 +114,9 @@
                 <input type="number" id="T4Input" name="T4Input"><br><br>
                 <button type="button" id="btnT4">Get Stars</button>
 
-                <div id= "T4Output">
+                <div id= "Output">
                     <div id = "T4OutText"> </div>
                 </div>
-
 
             </div>
 
@@ -135,6 +126,14 @@
 
             <div id="Tab_6" class="tabContent">
 
+                <label for="input">Please give me a statement</label><br><br>
+                <input type="text" id="T6Input" name="T6Input"><br><br>
+                <button type="button" id="btnT6">Censor Vowels</button>
+
+                <div id= "Output">
+                    <div id = "T6OutText"> </div>
+                </div>
+
             </div>
 
             <div id="Tab_7" class="tabContent">
@@ -143,6 +142,14 @@
 
             <div id="Tab_8" class="tabContent">
 
+                <label for="input">Please tell me how many chocolate bars you want</label><br><br>
+                <input type="number" id="T8Input" name="T8Input"><br><br>
+                <button type="button" id="btnT8">CHOCULATE</button>
+
+                <div id= "Output">
+                    <div id = "T8OutText"> </div>
+                </div>
+
             </div>
 
             <div id="Tab_9" class="tabContent">
@@ -150,6 +157,17 @@
             </div>
 
             <div id="Tab_10" class="tabContent">
+
+                <label for="input">Please give me three angles for a triangle</label><br><br>
+                <input type="number" id="T10Input1" name="T10Input1"><br><br>
+                <input type="number" id="T10Input2" name="T10Input2"><br><br>
+                <input type="number" id="T10Input3" name="T10Input3"><br><br>
+
+                <button type="button" id="btnT10">GEOMETRY</button>
+
+                <div id= "Output">
+                    <div id = "T10OutText"> </div>
+                </div>
 
             </div>
 
