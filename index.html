@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2: Jon McNamee & Jonah Martin</title>
+    <script src="A2.js"></script>
+    <style>
+        #content {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .tab {
+            width: 8%;
+            border: solid thin black;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 3%;
+            float: left;
+            box-shadow: 3px 3px;
+        }
+
+        .tab:hover {
+            cursor: pointer;
+            background-color: darkgreen;
+            text-decoration: underline;
+            color: white;
+        }
+
+        .tabContent {
+            padding: 20px;
+        }
+
+        .active {
+            color: white;
+            background-color: darkslategrey;
+            font-weight: bold;
+            text-decoration: underline;
+            box-shadow: 1px 1px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #Output {
+            border: solid thin black;
+            background-color: rgb(236, 225, 197);
+            width: 300px;
+            height: 500px;
+            margin-top: 10px;
+            padding: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+    </style>
+
+<body>
+    <div id="content">
+
+        <h1 class="header">Assignment #2: Jonah Martin & Jon McNamee</h1>
+
+        <div id="tabContainer">
+            <div class="tab">Tab 1</div>
+            <div class="tab">Tab 2</div>
+            <div class="tab">Tab 3</div>
+            <div class="tab">Tab 4</div>
+            <div class="tab">Tab 5</div>
+            <div class="tab">Tab 6</div>
+            <div class="tab">Tab 7</div>
+            <div class="tab">Tab 8</div>
+            <div class="tab">Tab 9</div>
+            <div class="tab">Tab 10</div>
+        </div>
+
+        <div id="Tab_1" class="tabContent">
+
+            <h1>Display Range</h1>
+            <label for="min">Min:</label>
+            <input type="number" id="min">
+            
+            <label for="max">Max:</label>
+            <input type="number" id="max">
+            
+            <button id="displayRange">Display Range</button>
+            
+            <div class="results" id="Output">
+                <ul></ul>
+            </div>
+
+
+        </div>
+
+        <div id="Tab_2" class="tabContent">
+            <h1>Calculate Stats</h1>
+            <label for="input">Please provide a list of numbers, separated by commas</label><br><br>
+            <input type="text" id="T2Input" name="T2Input"><br><br>
+            <button type="button" id="btnT2">Calculate</button>
+
+            <div id="Output">
+                <div id="T2OutText"> </div>
+            </div>
+
+        </div>
+
+        <div id="Tab_3" class="tabContent">
+
+                <h1>Key Search</h1>
+                <label for="numberList">Numbers:</label>
+                <input id="numberList">
+                <label for="key">Key:</label>
+                <input type="number" id="key">
+                <button id="keySearch">Search for Key</button>
+            
+                <p>Matches:</p>
+                <div class="T3Output" id="Output"></div>
+            
+        </div>
+
+        <div id="Tab_4" class="tabContent">
+
+            <h1>Output Stars</h1>
+            <label for="input">Please give me a number of stars</label><br><br>
+            <input type="number" id="T4Input" name="T4Input"><br><br>
+            <button type="button" id="btnT4">Get Stars</button>
+
+            <div id="Output">
+                <div id="T4OutText"> </div>
+            </div>
+
+        </div>
+
+        <div id="Tab_5" class="tabContent">
+
+            <h1>Output Stars (Multiple Lines)</h1>
+            <label for="numStars">Number of stars:</label>
+            <input id="numStars" type="number">
+            <label for="maxStars">Max per Line:</label>
+            <input id="maxStars" type="number">
+                        
+            <button id="outputStars">Output Stars</button>
+            <div class="starsOutput" id="Output"></div>
+
+        </div>
+
+        <div id="Tab_6" class="tabContent">
+
+            <h1>Censor Vowels</h1>
+            <label for="input">Please give me a statement</label><br><br>
+            <input type="text" id="T6Input" name="T6Input"><br><br>
+            <button type="button" id="btnT6">Censor Vowels</button>
+
+            <div id="Output">
+                <div id="T6OutText"> </div>
+            </div>
+
+        </div>
+
+        <div id="Tab_7" class="tabContent">
+            <h1>Ship Items</h1>
+            <label for="totalItems">Number of Items:</label>
+            <input type="number" id="totalItems">
+
+            <button id="displayPrices">Display Prices</button>
+
+            <div id="Output">
+            <p>Base Cost:</p>
+            <div id="baseCost"></div>
+            <p>Tax:</p>
+            <div id="tax"></div>
+            <p>Total:</p>
+            <div id="total"></div>
+            </div>
+        </div>
+
+        <div id="Tab_8" class="tabContent">
+
+            <h1>Chocolate Bars</h1>
+            <label for="input">Please tell me how many chocolate bars you want</label><br><br>
+            <input type="number" id="T8Input" name="T8Input"><br><br>
+            <button type="button" id="btnT8">CHOCULATE</button>
+
+            <div id="Output">
+                <div id="T8OutText"> </div>
+            </div>
+
+        </div>
+
+        <div id="Tab_9" class="tabContent">
+            <h1>Convert Binary</h1>
+            <label for="binaryNum">Binary Number:</label>
+            <input id="binaryNum">
+            <button id="binaryButton">Convert</button>
+                    
+            <p>Base 10 Conversion:</p>
+            <div id="Output" class="binaryConversion"></div>
+        </div>
+
+        <div id="Tab_10" class="tabContent">
+
+            <h1>Classify Triangle</h1>
+            <label for="input">Please give me three angles for a triangle</label><br><br>
+            <input type="number" id="T10Input1" name="T10Input1"><br><br>
+            <input type="number" id="T10Input2" name="T10Input2"><br><br>
+            <input type="number" id="T10Input3" name="T10Input3"><br><br>
+
+            <button type="button" id="btnT10">GEOMETRY</button>
+
+            <div id="Output">
+                <div id="T10OutText"> </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</head>
+
+</html>
